@@ -43,11 +43,11 @@ event OnGameReload()
 endEvent
 
 function fStartup()
-	if game.GetModbyName("FacelightPlus.esp") < 255
+	if Game.GetModbyName("FacelightPlus.esp") < 255
 		FaceLightEsp = true
 		FaceLightDark = game.GetFormFromFile(4815, "FaceLightPlus.esp") as spell
 		FaceLightBright = game.GetFormFromFile(4816, "FaceLightPlus.esp") as spell
-	elseIf game.GetModbyName("Facelight.esp") < 255
+	elseIf Game.GetModbyName("Facelight.esp") < 255
 		FaceLightEsp = true
 		FaceLightDark = game.GetFormFromFile(524194, "Facelight.esp") as spell
 		FaceLightBright = game.GetFormFromFile(538000, "Facelight.esp") as spell
@@ -586,13 +586,13 @@ Function fLightPreset(int akType, int akAttach, int akRadius, float akFade, int 
 	mlmPosZ = akPosZ
 	SetSliderOptionValueST(mlmPosZ)
 
-	ColorComponent.SetRed(mlmColor, akRed)
+	mlmColor = ColorComponent.SetRed(mlmColor, akRed)
 	SetSliderOptionValueST(akRed)
 	
-	ColorComponent.SetGreen(mlmColor, akGreen)
+	mlmColor = ColorComponent.SetGreen(mlmColor, akGreen)
 	SetSliderOptionValueST(akGreen)
 	
-	ColorComponent.SetBlue(mlmColor, akBlue)
+	mlmColor = ColorComponent.SetBlue(mlmColor, akBlue)
 	SetSliderOptionValueST(akBlue)
 	
 	ForcePageReset()
